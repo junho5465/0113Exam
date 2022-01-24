@@ -1,0 +1,21 @@
+package org.juno.service;
+
+import java.util.List;
+
+import org.juno.domain.BookVO;
+
+public class BookServiceImpl implements BookService {
+
+	@Override
+	public List<BookVO> getList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BookVO get(int bookId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

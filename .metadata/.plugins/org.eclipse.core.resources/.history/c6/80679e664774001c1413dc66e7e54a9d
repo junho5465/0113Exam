@@ -1,0 +1,28 @@
+package org.juno.controller;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
+@Log4j
+public class DataSourceTest {
+	@Setter(onMethod_ = { @Autowired })
+	private DataSource ds;
+	private SqlSessionFactory sqlSessionFactory;
+
+	@Test
+	public void testConnection() {
+		try (Connection con = ds.getConnection()) {
+			log.info(con);
+		} catch (Exception e) {
+			fail(e.getMessage());
+		}
+	}
+
+	public void testMyBatis() {
+		try (SqlSession session = sqlSessionFactory.openSession(); Connection con = session.getConnection();) {
+			log.info(session);
+			log.info(con);
+		} catch (Exception e) {
+			fail(e.getMessage());
+		}
+	}
+}

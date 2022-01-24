@@ -1,0 +1,9 @@
+package org.juno.persistence;
+
+import java.util.List;
+
+import org.juno.domain.BookVO;
+
+public class BookMapper {
+	public List<BookVO> getList();
+}

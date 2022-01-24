@@ -1,0 +1,9 @@
+package org.juno.domain;
+
+@Data
+public class BookVO {
+	private int BookId;
+	private String BookName;
+	private String Publisher;
+	private int Price;
+}

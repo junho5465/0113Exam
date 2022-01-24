@@ -1,0 +1,5 @@
+package org.juno.service;
+
+public class BookService {
+
+}

@@ -1,0 +1,5 @@
+package org.juno.domain;
+
+public class BookVO {
+
+}
